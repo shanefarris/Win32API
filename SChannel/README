@@ -1,0 +1,10 @@
+Client:
+cl /EHsc main.cpp ws2_32.lib secur32.lib
+
+ASM is not done.
+nasm -fwin32 main.asm
+link main.obj ws2_32.lib secur32.lib
+
+Server:
+cl /c main.cpp
+link main.obj ws2_32.lib secur32.lib
